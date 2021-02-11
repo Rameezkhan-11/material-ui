@@ -23,16 +23,7 @@ function App() {
      
       <Paper elevation={3} />
     </div>
-    <FormGroup>
-  <FormControlLabel
-    control={<Switch size="small" checked={checked} onChange={toggleChecked} />}
-    label="Small"
-  />
-  <FormControlLabel
-    control={<Switch checked={checked} onChange={toggleChecked} />}
-    label="Normal"
-  />
-</FormGroup>
+    <h1>Team V8</h1>
 
 
  </>
