@@ -1,33 +1,60 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-// import Card from '@material-ui/core/Card';
+import { Paper, TextField, Button } from '@material-ui/core/';
+import Navbar from './Navbar';
+import Chart from './Chart';
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    '& > *': {
-      margin: theme.spacing(1),
-      width: theme.spacing(16),
-      height: theme.spacing(16),
-    },
+  
+  paper: {
+    height: '400px',
+    width: '300px',
+    margin: '0 auto',
+    textAlign: 'center',
+    padding : 15,
+    marginTop : 15
+    
+
   },
+  input : {
+    width : '95%',
+    marginBottom : '10'
+  },
+  Button :{
+    marginTop: 10,
+    backgroundColor : 'green'
+    
+
+  }
 }));
 
 function App() {
   const classes = useStyles();
   return (
- <>
-  <h1>Hello World</h1>
-  <div className={classes.root}>
-     
-      <Paper elevation={3} />
-    </div>
-    <h1>Team V8</h1>
+    <>
 
+      <div className={classes.root}>
+        <Navbar />
 
- </>
+        <Paper elevation={3} className={classes.paper}>
+          <h1>Login</h1>
+          <form className={classes.root} noValidate autoComplete="off">
+            <TextField id="standard-basic" label="Enter userName" className={classes.input} />
+
+            <TextField id="standard-basic" label="Enter Pasword" className={classes.input} />
+              
+            <Button variant="contained"  className={classes.Button}>
+              Login
+</Button>
+
+          </form>
+
+        </Paper>
+      </div>
+
+      <Chart />
+
+    </>
   );
 }
 
