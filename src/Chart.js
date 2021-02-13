@@ -8,7 +8,7 @@ const data = {
 		'Yellow'
 	],
 	datasets: [{
-		data: [300, 50, 100],
+		data: [50,30,40],
 		backgroundColor: [
 		'#FF6384',
 		'#36A2EB',
@@ -23,6 +23,10 @@ const data = {
 };
 
 function Chart() {
+    
+    
+
+
     return (
       <div>
         <h2>Pie Example</h2>
